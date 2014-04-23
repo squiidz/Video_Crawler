@@ -1,5 +1,5 @@
 Video_Crawler
 =============
-  <p>Just build it with Go tools <br>
+  <p>Just build it with Go build walker.go<br>
   No dependencies ! </p>
-  <p>Usage : videoFinder -f [/start/point/]</p>
+  <p>Usage : walker -from [/start/point/] -type [test / video / name of file] -log [name of log file] </p>
