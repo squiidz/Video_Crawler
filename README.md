@@ -5,7 +5,7 @@ Video_Crawler
   No dependencies ! </p>
   <p>Usage : walker -from [/start/point/] -type [text / video / name of file] -log [name of log file] </p>
 
-<li> Text : Search for every .txt and nfo files </li>
-<li> Video: Search for every .mp4, .avi and .mkv files </li>
-<li> Name of file : Search for a specific file name </li>
+<p>- Text : Search for every .txt and nfo files </p>
+<p>- Video: Search for every .mp4, .avi and .mkv files </p>
+<p>- Name of file : Search for a specific file name </p>
 </html>
