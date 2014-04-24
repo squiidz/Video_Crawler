@@ -1,4 +1,4 @@
-package main //Change Package Name For import
+package walker //Change Package Name For import
 
 import (
 	"flag"
@@ -26,7 +26,7 @@ func videoCrawl(path string, f os.FileInfo, err error) error {
 		if strings.Contains(sub[i], ".mp4") || strings.Contains(sub[i], ".mkv") || strings.Contains(sub[i], ".avi") {
 
 			if strings.Contains(sub[i], ".torrent") == false && strings.Contains(sub[i], ".lnk") == false {
-				fmt.Println("[*] FOUND VIDEO FILE : " + sub[i])
+				//fmt.Println("[*] FOUND VIDEO FILE : " + sub[i])
 				File = append(File, sub[i])
 				Path = append(Path, path) // COntains the same things then VideoFile slice
 			}
@@ -109,9 +109,13 @@ func Alone() {
 	}
 }
 
-func Impor() []string {
-	root := "C:\\"
-	filepath.Walk(root, videoCrawl)
-
+func Impor(kind string, place string) []string {
+	if kind == "video" {
+		filepath.Walk(place, videoCrawl)
+	} else if kind == "text" {
+		filepath.Walk(place, textCrawl)
+	} else {
+		filepath.Walk(kind, costCrawl)
+	}
 	return File
 }
